@@ -7,5 +7,7 @@
 LOCAL_PATH := $(call my-dir)
 
 ifeq ($(TARGET_DEVICE),denniz)
+$(call add-radio-file,dynamic-remove-oplus)
+
 include $(call all-makefiles-under,$(LOCAL_PATH))
 endif
