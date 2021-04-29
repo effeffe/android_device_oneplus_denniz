@@ -3,6 +3,26 @@ on init
     chown system system /proc/fastchg_fw_update
     write /proc/fastchg_fw_update 1
 
+on post-fs
+
+on property:sys.boot_completed=1
+
+service prop-adap-core-gsi /odm/bin/self-init gsicore
+    class core
+    user root
+    group root system radio
+    oneshot
+    override
+    disabled
+
+service prop-adap-main-gsi /odm/bin/self-init gsimain
+    class main
+    user root
+    group root system radio
+    oneshot
+    override
+    disabled
+
 on post-fs-data
     # Update vibrator firmware
     write /sys/class/leds/vibrator/ram_update 1
