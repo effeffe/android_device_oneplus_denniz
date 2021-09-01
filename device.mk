@@ -28,6 +28,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Rootdir
 PRODUCT_PACKAGES += \
     init.mt6893.rc \
+    init.oplus.rc \
     init.recovery.mt6893.rc \
     fstab.mt6893 \
     fstab.mt6893_ramdisk
