@@ -11,3 +11,8 @@ service aee_aedv /system/bin/true
 service aee_aedv64 /system/bin/true
     oneshot
     disabled
+
+on post-fs-data
+    # Video
+    chmod 0666 /dev/video2
+    chmod 0666 /dev/video3
