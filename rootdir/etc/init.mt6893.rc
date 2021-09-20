@@ -13,6 +13,10 @@ service aee_aedv64 /system/bin/true
     disabled
 
 on post-fs-data
+    # MDP
+    chmod 0644 /dev/mdp_sync
+    chmod 0644 /dev/mtk_mdp
+
     # Video
     chmod 0666 /dev/video2
     chmod 0666 /dev/video3
