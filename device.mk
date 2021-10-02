@@ -28,6 +28,7 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 # Rootdir
 PRODUCT_PACKAGES += \
     init.recovery.mt6893.rc \
+    fstab.mt6893 \
     fstab.mt6893_ramdisk
 
 # Soong namespaces
@@ -36,3 +37,4 @@ PRODUCT_SOONG_NAMESPACES += \
 
 # VNDK
 PRODUCT_SHIPPING_API_LEVEL := 30
+PRODUCT_TARGET_VNDK_VERSION := 30
