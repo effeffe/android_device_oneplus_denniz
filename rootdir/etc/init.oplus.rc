@@ -11,3 +11,7 @@ on boot
     chown system system /proc/touchpanel/oplus_tp_direction
     write /proc/touchpanel/oplus_tp_limit_enable 0
     write /proc/touchpanel/oplus_tp_direction 1
+
+    # OTG
+    chown system system /sys/class/oplus_chg/usb/otg_switch
+    write /sys/class/oplus_chg/usb/otg_switch 1
