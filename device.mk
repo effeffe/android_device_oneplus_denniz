@@ -12,7 +12,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Alert slider
 PRODUCT_PACKAGES += \
-    oplus-alert-slider
+    alert-slider_daemon
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 2400
